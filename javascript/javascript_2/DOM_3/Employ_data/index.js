@@ -13,6 +13,7 @@ let Emp_data = [];
 
 function getData() {
   event.preventDefault();
+
   let Emp_obj = {
     name: name.value,
     id: id.value,
@@ -57,10 +58,13 @@ function display(data) {
     let col7 = document.createElement("td");
     if (el.experience > 5) {
       el.role = "Senior";
+      col7.style.color = "green"
     } else if (el.experience >= 2 && el.experience <= 5) {
       el.role = "junier";
+      col7.style.color = "orange"
     } else if (el.experience <= 1) {
       el.role = "Fresher";
+      col7.style.color = "purple"
     }
     col7.innerText = el.role;
     // console.log(col7);
@@ -70,6 +74,7 @@ function display(data) {
     col8.innerText = "Delete";
     // col8.style.backgroundColor = "red";
     col8.style.color = "red";
+    col8.style.cursor = "pointer"
 
     row.append(col1, col2, col3, col4, col5, col6, col7, col8);
     // console.log(row);

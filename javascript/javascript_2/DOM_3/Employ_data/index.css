@@ -45,12 +45,12 @@ div {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #3b0a3b;
+    background-color: #23b6e2;
     color: white;
     text-align: center;
   }
   table th:hover{
-    background-color: rgb(20, 5, 71);
+    background-color: #5ed4f8;
   }
   
   * {
@@ -71,7 +71,7 @@ div {
   }
   
   input[type="submit"] {
-    background-color:#3b0a3b;
+    background-color:#23b6e2;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -82,7 +82,7 @@ div {
   }
   
   input[type="submit"]:hover {
-    background-color:rgb(20, 5, 71);
+    background-color:#5ed4f8;
   }
   
   h1 {

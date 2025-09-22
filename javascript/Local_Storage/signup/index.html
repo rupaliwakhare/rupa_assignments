@@ -38,4 +38,40 @@
 
   
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("signup");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Stop form from submitting
+
+      // Get input values
+      const fullName = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Basic validation
+      if (fullName === "" || email === "" || password === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Create user object
+      const userData = {
+        name: fullName,
+        email: email,
+        password: password
+      };
+
+      // Save to localStorage
+      localStorage.setItem("signupData", JSON.stringify(userData));
+
+      alert("Signup successful! Data saved in localStorage 🌸");
+      form.reset(); // Clear the form
+    });
+  });
+</script>
+
+
+
 </html>

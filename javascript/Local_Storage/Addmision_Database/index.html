@@ -52,4 +52,36 @@
    </div>
     
 </body>
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from refreshing the page
+
+    // Get form values
+    const name = document.querySelector('input[type="text"]').value.trim();
+    const gender = document.querySelectorAll("select")[0].value;
+    const email = document.querySelector('input[type="email"]').value.trim();
+    const mobile = document.querySelector('input[type="number"]').value.trim();
+    const course = document.querySelectorAll("select")[1].value;
+
+    // Basic validation
+    if (!name || !gender || !email || !mobile || !course) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // Log the data (you can replace this with database logic or DOM updates)
+    console.log("Student Info:");
+    console.log("Name:", name);
+    console.log("Gender:", gender);
+    console.log("Email:", email);
+    console.log("Mobile:", mobile);
+    console.log("Course:", course);
+
+    alert("Student data submitted successfully!");
+
+    // Optionally reset the form
+    this.reset();
+  });
+</script>
+
 </html>
